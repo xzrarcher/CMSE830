@@ -4,7 +4,23 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Plotting function
+st.image('https://raw.githubusercontent.com/xzrarcher/CMSE830/main/st.png')
 
+st.title('Bank Marketing Data Exploration：what kind of people will survive under another crisis?')
+
+st.markdown("""
+In 2023, the world economy seems to be stuck in a rut. More and more economists are making pessimistic expectations about the future development of the global economy. With such a recession, it is highly likely that we will face another financial crisis in the next few years, like the one that happened in 2008, or even worse, the Great Depression of the 1920s. In this case, what kind of people have a higher probability of surviving and what kind of people have a higher probability of weathering future crises smoothly is the research direction of this project. We used customer information submitted by several European banks, including their occupations, incomes, deposits, educational backgrounds, etc., to try to analyze which groups of people would have a higher chance of receiving a smaller shock in a future financial crisis.
+""")
+
+
+st.markdown("""
+    ## Detailed Analysis and Observations
+
+    - **Age Distribution**: The majority of clients are in their 30s to 40s, indicating a market that is largely middle-aged. The distribution shows a normal curve but is slightly skewed towards the middle-aged group.
+    - **Job Distribution**: The predominant sector is 'blue-collar', followed by 'management' and 'technician', suggesting these are the primary market segments that the bank services are catered to.
+    - **Contact Duration & Term Deposits**: Clients who subscribed to term deposits ('yes') had significantly longer calls during the last contact. This insight could imply a strong correlation between successful conversions and the quality and length of customer interactions.
+    - **Annual Average Balance Distribution**: A large number of clients have an average annual balance close to zero, with only a few outliers having a very high balance. The chart is limited to balances under 5000 for a clearer visualization of the main clusters.
+    """)
 
 def plot_data(data):
     sns.set(style="whitegrid")
@@ -47,15 +63,6 @@ def plot_data(data):
     plt.tight_layout()
     return plt.gcf()  # back to plot
 
-
-st.markdown("""
-    ## Detailed Analysis and Observations
-
-    - **Age Distribution**: The majority of clients are in their 30s to 40s, indicating a market that is largely middle-aged. The distribution shows a normal curve but is slightly skewed towards the middle-aged group.
-    - **Job Distribution**: The predominant sector is 'blue-collar', followed by 'management' and 'technician', suggesting these are the primary market segments that the bank services are catered to.
-    - **Contact Duration & Term Deposits**: Clients who subscribed to term deposits ('yes') had significantly longer calls during the last contact. This insight could imply a strong correlation between successful conversions and the quality and length of customer interactions.
-    - **Annual Average Balance Distribution**: A large number of clients have an average annual balance close to zero, with only a few outliers having a very high balance. The chart is limited to balances under 5000 for a clearer visualization of the main clusters.
-    """)
 
 
 def main():
@@ -107,6 +114,12 @@ def main():
 
     data = load_data()
 
+ # Display a section title for the dataset preview
+    st.header('Dataset Preview')
+
+# Display the first few rows of the dataset
+    st.dataframe(data.head())
+    
     # Title
     st.header("Descriptive Analysis")
 
