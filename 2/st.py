@@ -19,7 +19,7 @@ the more important the feature is. If the coefficient is negative, it means that
 
 
 
-df = pd.DataFrame(coefs, index=[0])
+df = pd.DataFrame(coefficients, index=[0])
 df = df.T.reset_index()
 df.columns = ["Feature", "Coefficient"]
 st.write(df, use_container_width=True)
