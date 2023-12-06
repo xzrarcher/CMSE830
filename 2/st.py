@@ -26,7 +26,11 @@ st.write(df, use_container_width=True)
 st.bar_chart(df.set_index("Feature"))
 
 # Load the data
-housing_df = pd.read_csv("housing.csv")
+@st.cache_data  # update cache
+    def load_data():
+        url = "https://github.com/xzrarcher/CMSE830/blob/main/2/housing.csv"
+        housing_df = pd.read_csv(url, sep=";")
+        return data
 
 categorical_cols = ["ocean_proximity"]
 numerical_cols = [c for c in housing_df.columns if c not in categorical_cols and c != "median_house_value"]
