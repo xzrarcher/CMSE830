@@ -5,6 +5,7 @@ import pandas as pd
 import json
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
 
 st.markdown("# American Housing Price Prediction App")
 st.markdown("This app allows you to enter your house features and returns the estimated price of your house in USD.")
