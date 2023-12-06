@@ -6,7 +6,7 @@ import json
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
-from model_coefficients import coefficients
+from model_coefficients import coefs
 
 
 st.markdown("# American Housing Price Prediction App")
