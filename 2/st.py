@@ -9,8 +9,11 @@ import os
 from model_coefficients import coefs
 
 
-st.markdown("# American Housing Price Prediction App")
-st.markdown("This app allows you to enter your house features and returns the estimated price of your house in USD.")
+st.markdown("# California Housing Price Prediction App")
+st.markdown("# Welcome to the Premier House Price Analysis Tool")
+st.markdown("In an ever-evolving real estate landscape, accurate and strategic decision-making is the key to success. We present to you our sophisticated House Price Analysis Tool, meticulously crafted to serve as your expert guide in navigating the complexities of the property market. Designed with precision and a user-centric approach, this tool is not just a technological marvel; it's a reflection of our deep commitment to empowering real estate enthusiasts, investors, and professionals.")
+st.markdown("# Why Choose Our Tool?")
+st.markdown(" Our solution stands out as a testament to our expertise in blending cutting-edge technology with practical market intelligence. It's not just about numbers; it's about providing a clear, actionable perspective that enhances your real estate journey.")
 st.markdown("## Features that affect the price of your house")
 st.markdown("""You may want to know what features affect the price of your house. We used the dataset from Kaggle, which contains 13 explanatory variables describing (almost) every aspect of residential homes.
 The dataset can be found [here](https://www.kaggle.com/datasets/camnugent/california-housing-price). We used a simple Linear Regression model to predict the price of the house.
