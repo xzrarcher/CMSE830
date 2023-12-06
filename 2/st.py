@@ -6,6 +6,8 @@ import json
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
+from model_coefficients import coefficients
+
 
 st.markdown("# American Housing Price Prediction App")
 st.markdown("This app allows you to enter your house features and returns the estimated price of your house in USD.")
@@ -16,8 +18,7 @@ The model is not perfect, but it can give you a rough idea of how much your hous
 the more important the feature is. If the coefficient is negative, it means that the feature has a negative impact on the price of the house.""")
 
 
-with open("coefs.json", 'r') as f:
-    coefs = json.load(f)
+
 df = pd.DataFrame(coefs, index=[0])
 df = df.T.reset_index()
 df.columns = ["Feature", "Coefficient"]
