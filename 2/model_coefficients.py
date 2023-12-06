@@ -1,5 +1,5 @@
 # Coefficients for the housing price prediction model
-coefficients = {
+coefs = {
     "ocean_proximity_ISLAND": 130113.5963943309,
     "median_income": 39259.572876434,
     "housing_median_age": 1072.5200416374466,
