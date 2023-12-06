@@ -119,8 +119,8 @@ feature = st.sidebar.selectbox("Select a feature", housing_df.columns, key="side
 
 # Set up the descriptions
 desc = {
-    "longitude": "longitude",
-    "latitude": "latitude",
+    "longitude": "A measure of how far west a house is; a higher value is farther west",
+    "latitude": "A measure of how far north a house is; a higher value is farther north",
     "housing_median_age": "median age of a house within a block",
     "total_rooms": "total number of rooms within a block",
     "total_bedrooms": "total number of bedrooms within a block",
