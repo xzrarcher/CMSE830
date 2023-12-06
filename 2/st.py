@@ -21,7 +21,7 @@ the more important the feature is. If the coefficient is negative, it means that
 
 df = pd.DataFrame(coefficients, index=[0])
 df = df.T.reset_index()
-df.columns = ["Feature", "Coefficient"]
+df.columns = ["Feature", "coefs"]
 st.write(df, use_container_width=True)
 st.bar_chart(df.set_index("Feature"))
 
