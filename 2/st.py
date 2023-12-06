@@ -27,7 +27,7 @@ st.bar_chart(df.set_index("Feature"))
 
 # Load the data
 @st.cache_data  # update cache
-    def load_data():
+def load_data():
         url = "https://github.com/xzrarcher/CMSE830/blob/main/2/housing.csv"
         housing_df = pd.read_csv(url, sep=";")
         return data
