@@ -26,14 +26,19 @@ st.write(df, use_container_width=True)
 st.bar_chart(df.set_index("Feature"))
 
 # Load the data
-@st.cache_data  # update cache
+# Corrected load_data function
+@st.cache  # Use @st.cache
 def load_data():
-        url = "https://github.com/xzrarcher/CMSE830/blob/main/2/housing.csv"
-        housing_df = pd.read_csv(url, sep=";")
-        return data
+    url = "https://raw.githubusercontent.com/xzrarcher/CMSE830/main/2/housing.csv"
+    housing_df = pd.read_csv(url)  # Assuming the file is a standard CSV
+    return housing_df
+
+# Call the function to load data
+housing_df = load_data()
 
 categorical_cols = ["ocean_proximity"]
 numerical_cols = [c for c in housing_df.columns if c not in categorical_cols and c != "median_house_value"]
+
 # EDA
 st.markdown("## Exploratory Data Analysis")
 st.markdown("### Data Preview")
