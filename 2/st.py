@@ -179,7 +179,7 @@ with tab2:
 with tab3:
     st.markdown("# About the Creator")
     resume_content = """
-# Zhongren Xu's Resume
+# About Me
 
 ## Contact Information
 - **Email**: xuzhongr@msu.edu
